@@ -105,7 +105,7 @@ do {
 }
 ```
 
-# Terms and conditions
+## Terms and conditions
 
 - You will NOT use this script for marketing purposes (spam, botting, harassment, making clones, massive bulk scrap...).
 - I do NOT give support to anyone who wants to use this script to any crime.

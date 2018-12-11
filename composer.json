@@ -1,0 +1,7 @@
+{
+    "require": {
+        "guzzlehttp/guzzle": "~6.0",
+        "voku/simple_html_dom": "^4.1",
+        "voku/portable-utf8": "^5.2"
+    }
+}

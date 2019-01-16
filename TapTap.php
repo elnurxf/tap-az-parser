@@ -1,19 +1,18 @@
 <?php
 /**
  * https://github.com/elnurxf/tap-az-parser
- * TapTap - Tap.Az parser
+ * TapTap - Tap.Az parser.
  *
  * (C) 2018 GNU General Public License
  */
-
 use GuzzleHttp\Client;
 use GuzzleHttp\Psr7\Request;
 use voku\helper\HtmlDomParser;
 
 class TapTap
 {
-    public $ads       = [];
-    public $ad        = [];
+    public $ads = [];
+    public $ad = [];
     public $next_page = null;
 
     public function getAds($url)
@@ -23,7 +22,6 @@ class TapTap
         // get latest ad
         $request = new Request('GET', $url);
         $promise = $client->sendAsync($request)->then(function ($response) {
-
             $html = $response->getBody()->getContents();
 
             $dom = HtmlDomParser::str_get_html($html);
@@ -34,7 +32,6 @@ class TapTap
 
             // next page
             $this->next_page = $dom->find('div.pagination div.next a', 0)->href;
-
         });
 
         $promise->wait();
@@ -47,7 +44,6 @@ class TapTap
         // get ads
         $request = new Request('GET', $url);
         $promise = $client->sendAsync($request)->then(function ($response) {
-
             $html = $response->getBody()->getContents();
 
             $dom = HtmlDomParser::str_get_html($html);
@@ -93,7 +89,6 @@ class TapTap
                     'large' => $photo->href,
                 ];
             }
-
         });
 
         $promise->wait();

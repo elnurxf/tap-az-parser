@@ -2,6 +2,8 @@
 # tap-az-parser
 Tap.Az Ads Parser
 
+[![StyleCI](https://github.styleci.io/repos/161325486/shield?branch=master)](https://github.styleci.io/repos/161325486)
+
 ## Installation
 Clone project
 
